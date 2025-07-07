@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Living Summit 2025 | ALT.RE Series</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1A1A1A;
+            --secondary: #2A2A2A;
+            --accent: #926009;
+            --accent-light: #B37A0B;
+            --text: #E5E5E5;
+            --text-light: #F5F5F5;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--accent);
+        }
+        
+        /* Header */
+        .main-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--primary);
+            z-index: 1000;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.4);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            height: 40px;
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+        
+        .logo-text span {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            letter-spacing: 3px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 800px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.4;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.6) 100%);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1000px;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+        
+        .hero p.subheadline {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+        
+        .floating-tag {
+            background: rgba(146, 96, 9, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--accent);
+            padding: 0.8rem 2rem;
+            display: inline-block;
+            border-radius: 50px;
+            margin-bottom: 3rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--accent-light);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+            border: 2px solid var(--accent);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(146, 96, 9, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(146, 96, 9, 0.4);
+        }
+        
+        .trust-bar {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(26,26,26,0.7);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+        }
+        
+        .trust-bar p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .trust-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .trust-icon i {
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+        
+        .trust-icon span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        
+        .section.dark {
+            background-color: var(--primary);
+        }
+        
+        .section.light {
+            background-color: var(--secondary);
+        }
+        
+        .section.with-bg {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+        
+        .section.with-video {
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 2rem;
+        }
+        
+        .section-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.3;
+        }
+        
+        .section-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.7) 100%);
+            z-index: 2;
+        }
+        
+        .section-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.75) 100%);
+            z-index: 2;
+        }
+        
+        .section-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--accent);
+            bottom: -15px;
+            left: 25%;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-light);
+        }
+        
+        /* Strategic Curation Section */
+        .curation-section {
+            background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.85)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .curation-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(26, 26, 26, 0.8);
+            padding: 3rem;
+            border-radius: 5px;
+            border: 1px solid var(--accent);
+        }
+        
+        /* Who's in the Room Section */
+        .attendees-section {
+            background-color: var(--secondary);
+        }
+        
+        .attendees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .attendee-card {
+            background: var(--primary);
+            padding: 2.5rem 2rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(146, 96, 9, 0.3);
+        }
+        
+        .attendee-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            border-color: var(--accent);
+        }
+        
+        .attendee-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        .attendee-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .attendee-card p {
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        
+        /* Why Attend Section */
+        .why-attend.with-video {
+            padding: 8rem 2rem;
+        }
+        
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .pillar {
+            background: rgba(26,26,26,0.8);
+            padding: 2.5rem 2rem;
+            border-left: 4px solid var(--accent);
+            color: var(--text);
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        
+        .pillar:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(146, 96, 9, 0.05) 0%, rgba(146, 96, 9, 0.02) 100%);
+            z-index: 0;
+        }
+        
+        .pillar-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pillar-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        .pillar h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+        
+        .pillar ul {
+            padding-left: 1rem;
+            margin: 0;
+        }
+        
+        .pillar li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            font-size: 0.95rem;
+            padding-left: 1.5rem;
+        }
+        
+        .pillar li:before {
+            content: '→';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Agenda Section */
+        .agenda-section {
+            background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.85)), 
+                        url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .agenda-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .agenda-tab {
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--accent);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .agenda-tab.active, .agenda-tab:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+        
+        .agenda-items {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .agenda-item {
+            background: rgba(26,26,26,0.8);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .agenda-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        
+        .agenda-time {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .agenda-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-light);
+        }
+        
+        .agenda-speaker {
+            color: var(--text);
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        
+        /* Speakers Section */
+        .speakers-section {
+            background-color: var(--secondary);
+        }
+        
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .speaker-card {
+            background: var(--primary);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(146, 96, 9, 0.3);
+        }
+        
+        .speaker-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            border-color: var(--accent);
+        }
+        
+        .speaker-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .speaker-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 100%);
+        }
+        
+        .speaker-name {
+            color: var(--accent);
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .speaker-title {
+            color: var(--accent-light);
+            font-size: 0.9rem;
+        }
+        
+        .speaker-info {
+            padding: 1.5rem;
+        }
+        
+        .speaker-bio {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .speaker-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .speaker-social a {
+            color: var(--accent-light);
+            transition: color 0.3s;
+        }
+        
+        .speaker-social a:hover {
+            color: var(--accent);
+        }
+        
+        /* Showcase Arena Section */
+        .showcase-section.with-video {
+            padding: 8rem 2rem;
+        }
+        
+        .showcase-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .showcase-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .showcase-feature {
+            background: rgba(26,26,26,0.8);
+            padding: 2rem;
+            border-radius: 5px;
+            border: 1px solid rgba(146, 96, 9, 0.3);
+        }
+        
+        .showcase-feature h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .showcase-feature p {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        
+        /* Deal Room Section */
+        .dealroom-section {
+            background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.85)), 
+                        url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .dealroom-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto;
+        }
+        
+        .dealroom-feature {
+            background: rgba(26,26,26,0.8);
+            padding: 2rem;
+            border-radius: 5px;
+            border: 1px solid rgba(146, 96, 9, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .dealroom-feature:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        
+        .dealroom-feature h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        
+        .dealroom-feature p {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        
+        /* Awards Section */
+        .awards-section {
+            background-color: var(--secondary);
+        }
+        
+        .awards-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+        
+        .award-category {
+            background: var(--primary);
+            padding: 1.5rem;
+            border-radius: 5px;
+            border: 1px solid rgba(146, 96, 9, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .award-category:hover {
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+        
+        .award-category h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .award-category p {
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.85)), 
+                        url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(146, 96, 9, 0.3);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            background: rgba(26,26,26,0.8);
+            color: var(--accent);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: rgba(26,26,26,0.6);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        /* Vertical Form Section */
+        .vertical-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(26,26,26,0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(146, 96, 9, 0.3);
+        }
+        
+        .form-header {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .form-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        .vertical-form {
+            padding: 2.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            background: var(--primary);
+            border: 1px solid rgba(146, 96, 9, 0.5);
+            border-radius: 5px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            color: var(--text);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(146, 96, 9, 0.2);
+        }
+        
+        .form-submit {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .btn-form {
+            padding: 1rem 3rem;
+            background: var(--accent);
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(146, 96, 9, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+        }
+        
+        .btn-form:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(146, 96, 9, 0.6);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text);
+            border-top: 1px solid rgba(146, 96, 9, 0.3);
+        }
+        
+        .footer-title {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-social a {
+            color: var(--accent-light);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-social a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: var(--accent-light);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                margin-top: 70px;
+                height: auto;
+                padding: 5rem 0;
+                min-height: auto;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p.subheadline {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-menu {
+                display: none; /* Mobile menu would go here */
+            }
+            
+            .section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .section.with-video {
+                padding: 6rem 1.5rem;
+            }
+            
+            .attendees-grid, .pillars, .speakers-grid, .showcase-features, 
+            .dealroom-features, .awards-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .logo-text span {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="2-2.webp" alt="ALT.RE Summit Logo" class="logo-img">
+                <div class="logo-text">
+                    ALT.RE
+                    <span>SUMMIT</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#agenda">Agenda</a>
+                <a href="#speakers">Speakers</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#dealroom">Deal Room</a>
+                <a href="#awards">Awards</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://goldenrod-sheep-864203.hostingersite.com/wp-content/uploads/2025/06/coverr-trip-through-the-city-7052-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>India's Only Platform for Branded Residences & Luxe Living</h1>
+            <p class="subheadline">Where Developers, Investors, Designers & Luxury Brands shape the future of high-value living experiences in India.</p>
+            
+            <div class="floating-tag">
+                <i class="fas fa-calendar-alt"></i> 26 September 2025 · <i class="fas fa-map-marker-alt"></i> Jio World Convention Centre, Mumbai
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#register" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Request Info
+                </a>
+                <a href="#register" class="btn btn-secondary">
+                    <i class="fas fa-phone-alt"></i> Book a Call
+                </a>
+            </div>
+            
+            <div class="trust-bar">
+                <p><i class="fas fa-quote-left"></i> Backed by leaders across real estate, hospitality, and luxury <i class="fas fa-quote-right"></i></p>
+                <div class="trust-logos">
+                    <div class="trust-icon">
+                        <i class="fas fa-chess-queen"></i>
+                        <span>Noesis</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>ALT.RE</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-hotel"></i>
+                        <span>Accor</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-building"></i>
+                        <span>Marriott</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Delta Light</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-rug"></i>
+                        <span>Cocoon Rugs</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-landmark"></i>
+                        <span>Lladró</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Strategic Curation Section -->
+    <section class="section with-bg curation-section">
+        <div class="section-bg-overlay"></div>
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Curated by Noesis. Powered by the ALT.RE Series Platform.</h2>
+                <p>Luxe Living Summit is a strategic chapter of the ALT.RE Series — India's leading investment-led platform for alternative real estate.</p>
+            </div>
+            
+            <div class="curation-content">
+                <p>Curated by Noesis Capital Advisors, India's top hospitality and branded residence advisory, with a ₹12,000 Cr+ transaction record and 2,300+ mandates delivered, the summit unites visionaries to unlock luxury living's next growth wave.</p>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#partnership" class="btn btn-primary"><i class="fas fa-handshake"></i> Become a Partner</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Who's in the Room Section -->
+    <section class="section light attendees-section">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>A Curated Convergence of Stakeholders</h2>
+                <p>Meet the decision-makers behind India's most iconic residential and hospitality experiences.</p>
+            </div>
+            
+            <div class="attendees-grid">
+                <div class="attendee-card">
+                    <div class="attendee-icon"><i class="fas fa-building"></i></div>
+                    <h3>Developers</h3>
+                    <p>Luxury and branded real estate leaders driving iconic projects.</p>
+                </div>
+                
+                <div class="attendee-card">
+                    <div class="attendee-icon"><i class="fas fa-hotel"></i></div>
+                    <h3>Hospitality & Lifestyle Brands</h3>
+                    <p>Seeking co-branded presence and premium customer access.</p>
+                </div>
+                
+                <div class="attendee-card">
+                    <div class="attendee-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Investors & Family Offices</h3>
+                    <p>UHNI, institutional, and private investors tracking luxury opportunities.</p>
+                </div>
+                
+                <div class="attendee-card">
+                    <div class="attendee-icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <h3>Design Studios & Architects</h3>
+                    <p>Creating experiences that blend aesthetics with aspiration.</p>
+                </div>
+                
+                <div class="attendee-card">
+                    <div class="attendee-icon"><i class="fas fa-couch"></i></div>
+                    <h3>FF&E, Smart Living & Wellness Brands</h3>
+                    <p>Bringing functionality, comfort, and design innovation to life.</p>
+                </div>
+                
+                <div class="attendee-card">
+                    <div class="attendee-icon"><i class="fas fa-tasks"></i></div>
+                    <h3>Consultants, PMCs & Master Planners</h3>
+                    <p>Enabling successful execution across strategy and structure.</p>
+                </div>
+                
+                <div class="attendee-card">
+                    <div class="attendee-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Legal, Financial & Platform Enablers</h3>
+                    <p>Powering ownership models, REITs, tokenization, and compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Attend Section -->
+    <section class="section with-video why-attend">
+        <video autoplay muted loop class="section-video">
+            <source src="https://goldenrod-sheep-864203.hostingersite.com/wp-content/uploads/2025/06/coverr-lisbon-architecture-3421-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="section-video-overlay"></div>
+        <div class="section-content">
+            <div class="section-title">
+                <h2>An Outcomes-Led Platform</h2>
+                <p>For Capital, Brand & Experience Builders</p>
+            </div>
+            
+            <div class="pillars">
+                <div class="pillar">
+                    <div class="pillar-content">
+                        <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Curated 1:1 Matchmaking</h3>
+                        <ul>
+                            <li>AI-driven meetings connecting developers, capital allocators, brands, designers & enablers via our proprietary Match Engine™</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pillar">
+                    <div class="pillar-content">
+                        <div class="pillar-icon"><i class="fas fa-store"></i></div>
+                        <h3>Branded Showcase Arena</h3>
+                        <ul>
+                            <li>Visibility zone for platforms, solution providers, design houses, and lifestyle brands</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pillar">
+                    <div class="pillar-content">
+                        <div class="pillar-icon"><i class="fas fa-microphone"></i></div>
+                        <h3>Thought Leadership</h3>
+                        <ul>
+                            <li>Actionable sessions on capital flow, branding strategy, ownership structures, and design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pillar">
+                    <div class="pillar-content">
+                        <div class="pillar-icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <h3>End-to-End Ecosystem</h3>
+                        <ul>
+                            <li>Navigate legal, platform, and structural playbooks in a single day</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#register" class="btn btn-primary"><i class="fas fa-user-tie"></i> Register as Delegate</a>
+                <a href="#sponsorship" class="btn btn-secondary"><i class="fas fa-star"></i> Explore Sponsorship</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Agenda Section -->
+    <section class="section with-bg agenda-section" id="agenda">
+        <div class="section-bg-overlay"></div>
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Agenda Highlights</h2>
+                <p>Designed to Deliver Insight. Structured to Drive Action.</p>
+            </div>
+            
+            <div class="agenda-tabs">
+                <div class="agenda-tab active">Day 1</div>
+                <div class="agenda-tab">Day 2</div>
+                <div class="agenda-tab">Workshops</div>
+            </div>
+            
+            <div class="agenda-items">
+                <div class="agenda-item">
+                    <div class="agenda-time"><i class="fas fa-clock"></i> 09:00 - 10:30</div>
+                    <h3 class="agenda-title">The Branded Boom – Investor demand and developer pipeline across India</h3>
+                    <p class="agenda-speaker">Keynote by Daniel Von Barloewen – SVP, Accor One Living</p>
+                </div>
+                
+                <div class="agenda-item">
+                    <div class="agenda-time"><i class="fas fa-clock"></i> 10:45 - 12:00</div>
+                    <h3 class="agenda-title">The Brand is the Building – Hospitality groups unlocking real estate premiums</h3>
+                    <p class="agenda-speaker">Panel discussion with Kiran Andicot – SVP Hotel Development, Marriott International</p>
+                </div>
+                
+                <div class="agenda-item">
+                    <div class="agenda-time"><i class="fas fa-clock"></i> 13:30 - 14:45</div>
+                    <h3 class="agenda-title">Future Buyer Lens – Understanding the Gen Z + NRI luxury buyer</h3>
+                    <p class="agenda-speaker">Presentation by Nandivardhan Jain – CEO, Noesis Capital Advisors</p>
+                </div>
+                
+                <div class="agenda-item">
+                    <div class="agenda-time"><i class="fas fa-clock"></i> 15:00 - 16:30</div>
+                    <h3 class="agenda-title">Fractional & Tokenized Ownership – Structuring next-gen luxury models</h3>
+                    <p class="agenda-speaker">Workshop with leading legal and financial experts</p>
+                </div>
+                
+                <div class="agenda-item">
+                    <div class="agenda-time"><i class="fas fa-clock"></i> 16:45 - 18:00</div>
+                    <h3 class="agenda-title">Crafting Branded Experiences – Wellness, service, and identity through design</h3>
+                    <p class="agenda-speaker">Panel with award-winning architects and designers</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#full-agenda" class="btn btn-primary"><i class="fas fa-file-alt"></i> View Full Agenda</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Speakers Section -->
+    <section class="section light speakers-section" id="speakers">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Voices of the Movement</h2>
+                <p>Global Icons. India's Visionaries. The Future of Branded Living.</p>
+            </div>
+            
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80');">
+                        <div class="speaker-overlay">
+                            <h3 class="speaker-name">Daniel Von Barloewen</h3>
+                            <p class="speaker-title">SVP, Accor One Living</p>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <p class="speaker-bio">Leading Accor's branded residences division with 50+ properties worldwide. Pioneer in luxury hospitality-real estate integration.</p>
+                        <div class="speaker-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="speaker-card">
+                    <div class="speaker-image" style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80');">
+                        <div class="speaker-overlay">
+                            <h3 class="speaker-name">Kiran Andicot</h3>
+                            <p class="speaker-title">SVP Hotel Development, Marriott International</p>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <p class="speaker-bio">Driving Marriott's expansion in South Asia with 30+ new projects. Expert in luxury brand positioning and market strategy.</p>
+                        <div class="speaker-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="speaker-card">
+                    <div class="speaker-image" style="background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80');">
+                        <div class="speaker-overlay">
+                            <h3 class="speaker-name">Nandivardhan Jain</h3>
+                            <p class="speaker-title">CEO, Noesis Capital Advisors</p>
+                        </div>
+                    </div>
+                    <div class="speaker-info">
+                        <p class="speaker-bio">India's foremost hospitality advisor with ₹12,000 Cr+ in transactions. Architect of landmark branded residence projects.</p>
+                        <div class="speaker-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#speakers" class="btn btn-primary"><i class="fas fa-microphone"></i> View All Speakers</a>
+                <a href="#nominate" class="btn btn-secondary"><i class="fas fa-lightbulb"></i> Nominate a Speaker</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Showcase Arena Section -->
+    <section class="section with-video showcase-section" id="showcase">
+        <video autoplay muted loop class="section-video">
+            <source src="https://goldenrod-sheep-864203.hostingersite.com/wp-content/uploads/2025/06/coverr-lisbon-architecture-3421-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="section-video-overlay"></div>
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Showcase Arena</h2>
+                <p>Where Luxury Players Showcase Vision, Value & Partnership Potential</p>
+            </div>
+            
+            <div class="showcase-content">
+                <p>Premium brands, platforms, and service innovators can stand out with curated pods and meeting zones.</p>
+                
+                <div class="showcase-features">
+                    <div class="showcase-feature">
+                        <h3><i class="fas fa-building"></i> Developers</h3>
+                        <p>Present luxury/branded projects to qualified investors and partners</p>
+                    </div>
+                    
+                    <div class="showcase-feature">
+                        <h3><i class="fas fa-hotel"></i> Hospitality & Lifestyle Brands</h3>
+                        <p>Explore co-branding opportunities with real estate developers</p>
+                    </div>
+                    
+                    <div class="showcase-feature">
+                        <h3><i class="fas fa-pencil-ruler"></i> Design Studios</h3>
+                        <p>Exhibit living concepts to developers and investors</p>
+                    </div>
+                    
+                    <div class="showcase-feature">
+                        <h3><i class="fas fa-lightbulb"></i> Platform Innovators</h3>
+                        <p>Showcase tokenization, PropTech, and REIT solutions</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#book-showcase" class="btn btn-primary"><i class="fas fa-couch"></i> Book Your Showcase Pod</a>
+                    <a href="#sponsor-showcase" class="btn btn-secondary"><i class="fas fa-star"></i> Sponsor the Arena</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Deal Room Section -->
+    <section class="section with-bg dealroom-section" id="dealroom">
+        <div class="section-bg-overlay"></div>
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Deal Room & 1:1 Meetings</h2>
+                <p>Real Conversations. Qualified Mandates. Strategic Outcomes.</p>
+            </div>
+            
+            <div class="dealroom-features">
+                <div class="dealroom-feature">
+                    <h3><i class="fas fa-search"></i> AI-powered Interest Matching</h3>
+                    <p>Our proprietary algorithm connects you with the most relevant partners based on your objectives and preferences.</p>
+                </div>
+                
+                <div class="dealroom-feature">
+                    <h3><i class="fas fa-calendar-check"></i> Pre-scheduled Meetings</h3>
+                    <p>Guaranteed 10+ pre-booked meetings with qualified partners in private pods and lounges.</p>
+                </div>
+                
+                <div class="dealroom-feature">
+                    <h3><i class="fas fa-chalkboard"></i> Investor Showcases</h3>
+                    <p>Exclusive closed-door sessions where developers present projects to capital allocators.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#apply-meetings" class="btn btn-primary"><i class="fas fa-calendar-alt"></i> Apply for Meeting Access</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Awards Section -->
+    <section class="section light awards-section" id="awards">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Luxe Living Awards</h2>
+                <p>Recognizing Design, Brand & Experience Leadership</p>
+            </div>
+            
+            <div class="awards-categories">
+                <div class="award-category">
+                    <h3><i class="fas fa-trophy"></i> Best Branded Residence Project</h3>
+                    <p>Celebrating excellence in luxury residential developments with branded partnerships</p>
+                </div>
+                
+                <div class="award-category">
+                    <h3><i class="fas fa-paint-roller"></i> Luxe Interior Collaboration</h3>
+                    <p>Recognizing outstanding design partnerships between developers and design studios</p>
+                </div>
+                
+                <div class="award-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Smart Living Innovation</h3>
+                    <p>Awarding technological breakthroughs that enhance luxury living experiences</p>
+                </div>
+                
+                <div class="award-category">
+                    <h3><i class="fas fa-handshake"></i> Co-Branding Excellence</h3>
+                    <p>Honoring the most successful real estate and hospitality brand partnerships</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#submit-nomination" class="btn btn-primary"><i class="fas fa-award"></i> Submit a Nomination</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="section with-bg faq-section" id="faq">
+        <div class="section-bg-overlay"></div>
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Have Questions?</h2>
+                <p>We've Got You Covered</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>Who can attend Luxe Living Summit?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The summit is open to developers, investors, hospitality brands, designers, and service providers in the luxury real estate space. All attendees are vetted to ensure a qualified audience.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I qualify for a 1:1 meeting pod?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Meeting pods are available to sponsors and premium delegates. You can apply during registration, and our team will review your profile to ensure productive matchmaking.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can international brands participate?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We welcome global luxury brands looking to enter or expand in the Indian market. Special concierge services are available for international attendees.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I nominate a speaker or apply for awards?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Speaker nominations and award applications can be submitted through our website. The selection committee reviews all submissions on a rolling basis.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's the dress code or onsite setup?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The event is business formal. The venue offers premium meeting pods, lounge areas, and showcase spaces designed for luxury networking.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#concierge" class="btn btn-primary"><i class="fas fa-headset"></i> Speak to Our Concierge</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Vertical Registration Form Section -->
+    <section class="section dark" id="register">
+        <div class="section-content">
+            <div class="section-title">
+                <h2>Join the Luxe Living Inner Circle</h2>
+                <p>Get early access to matchmaking invites, brand visibility offers, and curated capital briefings.</p>
+            </div>
+            
+            <div class="vertical-form-container">
+                <div class="form-header">
+                    <h3>Reserve Your Access</h3>
+                </div>
+                <form class="vertical-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Job Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest">Primary Interest</label>
+                        <select id="interest" class="form-control" required>
+                            <option value="">Select your interest</option>
+                            <option value="developer">Developer</option>
+                            <option value="investor">Investor</option>
+                            <option value="brand">Luxury Brand</option>
+                            <option value="designer">Designer/Architect</option>
+                            <option value="service">Service Provider</option>
+                            <option value="media">Media</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn-form">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-title">ALT.RE SUMMIT 2025</div>
+        <p><i class="fas fa-map-marker-alt"></i> Jio World Convention Centre, Mumbai | <i class="fas fa-calendar-alt"></i> 26 September 2025</p>
+        
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#speakers">Speakers</a>
+            <a href="#partners">Partners</a>
+            <a href="#contact">Contact</a>
+            <a href="#terms">Terms</a>
+            <a href="#privacy">Privacy</a>
+        </div>
+        
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        
+        <p class="copyright">© 2025 Luxe Living Summit. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission
+        const form = document.querySelector('.vertical-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for joining. Your Luxe Inner Circle access will be emailed shortly.');
+            form.reset();
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Agenda Tabs
+        const agendaTabs = document.querySelectorAll('.agenda-tab');
+        agendaTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                agendaTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // Here you would typically load different agenda content
+            });
+        });
+    </script>
+</body>
+</html>
